@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  MzPedal: drilling template for a Hammond 1590X (145 x 121 x 52 mm), at 1:1.
+  Print at 100% ("actual size", no fit to page) on A4, and measure the check line: 100 mm.
+  All units are millimetres. Centre punch on each cross; pilot 3 mm, then step up to the size.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 210 297"
+     font-family="Helvetica, Arial, sans-serif">
+  <style>
+    .face { fill: none; stroke: #000; stroke-width: 0.3; }
+    .hole { fill: none; stroke: #000; stroke-width: 0.25; }
+    .cross { stroke: #000; stroke-width: 0.15; }
+    .cut { fill: none; stroke: #000; stroke-width: 0.25; stroke-dasharray: 1 0.6; }
+    .label { font-size: 2.6px; text-anchor: middle; }
+    .size { font-size: 2px; text-anchor: middle; fill: #555; }
+    .title { font-size: 4px; font-weight: bold; }
+    .note { font-size: 2.6px; }
+  </style>
+
+  <defs>
+    <!-- a hole: its circle and a centre cross -->
+    <g id="x"><line class="cross" x1="-2" y1="0" x2="2" y2="0"/><line class="cross" x1="0" y1="-2" x2="0" y2="2"/></g>
+  </defs>
+
+  <text class="title" x="10" y="9">MzPedal - Hammond 1590X drilling template (1:1, print at 100%)</text>
+
+  <!-- ===================================================== the top face, 121 x 145 -->
+  <g transform="translate(10,15)">
+    <rect class="face" x="0" y="0" width="121" height="145" rx="6"/>
+    <text class="size" x="60.5" y="-1.5">TOP FACE - rear (DC, MIDI) at this edge</text>
+    <text class="size" x="60.5" y="149">front: footswitches</text>
+
+    <!-- 8 pots, 7.5 mm -->
+    <g>
+      <circle class="hole" cx="21.5" cy="20" r="3.75"/><use href="#x" x="21.5" y="20"/><text class="label" x="21.5" y="12.5">DRIVE</text>
+      <circle class="hole" cx="47.5" cy="20" r="3.75"/><use href="#x" x="47.5" y="20"/><text class="label" x="47.5" y="12.5">SHAPE</text>
+      <circle class="hole" cx="73.5" cy="20" r="3.75"/><use href="#x" x="73.5" y="20"/><text class="label" x="73.5" y="12.5">TONE</text>
+      <circle class="hole" cx="99.5" cy="20" r="3.75"/><use href="#x" x="99.5" y="20"/><text class="label" x="99.5" y="12.5">FDBK</text>
+      <circle class="hole" cx="21.5" cy="45" r="3.75"/><use href="#x" x="21.5" y="45"/><text class="label" x="21.5" y="37.5">PUSH</text>
+      <circle class="hole" cx="47.5" cy="45" r="3.75"/><use href="#x" x="47.5" y="45"/><text class="label" x="47.5" y="37.5">DECAY</text>
+      <circle class="hole" cx="73.5" cy="45" r="3.75"/><use href="#x" x="73.5" y="45"/><text class="label" x="73.5" y="37.5">MIX</text>
+      <circle class="hole" cx="99.5" cy="45" r="3.75"/><use href="#x" x="99.5" y="45"/><text class="label" x="99.5" y="37.5">LEVEL</text>
+      <text class="size" x="60.5" y="54">pots: 7.5 mm, 26 mm apart</text>
+    </g>
+
+    <!-- the OLED's window, 24 x 13, and the encoder -->
+    <rect class="cut" x="28" y="66.5" width="24" height="13"/>
+    <use href="#x" x="40" y="73"/>
+    <text class="label" x="40" y="63.5">SCREEN</text>
+    <text class="size" x="40" y="83">window 24 x 13 - check your module</text>
+
+    <circle class="hole" cx="96" cy="73" r="3.75"/><use href="#x" x="96" y="73"/>
+    <text class="label" x="96" y="65.5">PATTERN / MENU</text>
+    <text class="size" x="96" y="80.5">encoder 7.5 mm</text>
+
+    <!-- LEDs, 8 mm for bezels -->
+    <circle class="hole" cx="30" cy="100" r="4"/><use href="#x" x="30" y="100"/><text class="label" x="30" y="94">TEMPO</text>
+    <circle class="hole" cx="91" cy="100" r="4"/><use href="#x" x="91" y="100"/><text class="label" x="91" y="94">ON</text>
+    <text class="size" x="60.5" y="101">LEDs: 8 mm (bezels)</text>
+
+    <!-- footswitches, 12 mm -->
+    <circle class="hole" cx="30" cy="124" r="6"/><use href="#x" x="30" y="124"/><text class="label" x="30" y="134">TAP</text>
+    <circle class="hole" cx="91" cy="124" r="6"/><use href="#x" x="91" y="124"/><text class="label" x="91" y="134">ON / BYPASS</text>
+    <text class="size" x="60.5" y="125">footswitches: 12 mm</text>
+  </g>
+
+  <!-- ===================================================== the left side, 52 (depth) x 145,
+       seen from outside: the top face's edge on the right -->
+  <g transform="translate(145,15)">
+    <rect class="face" x="0" y="0" width="52" height="145" rx="3"/>
+    <text class="size" x="26" y="-1.5">LEFT SIDE (from outside)</text>
+    <text class="size" x="26" y="149">front</text>
+    <text class="size" x="50" y="72" transform="rotate(90 50 72)">top face edge</text>
+
+    <circle class="hole" cx="22" cy="33" r="4.75"/><use href="#x" x="22" y="33"/>
+    <text class="label" x="22" y="26">OUTPUT</text>
+    <text class="size" x="22" y="41">9.5 mm</text>
+
+    <circle class="hole" cx="26" cy="80" r="12"/><use href="#x" x="26" y="80"/>
+    <text class="label" x="26" y="64.5">DI OUT (optional)</text>
+    <text class="size" x="26" y="96">XLR 24 mm + its screw holes</text>
+
+    <circle class="hole" cx="22" cy="110" r="3"/><use href="#x" x="22" y="110"/>
+    <text class="label" x="22" y="105">PAD</text>
+    <circle class="hole" cx="22" cy="126" r="3"/><use href="#x" x="22" y="126"/>
+    <text class="label" x="22" y="121">LIFT</text>
+    <text class="size" x="22" y="133">toggles 6 mm</text>
+  </g>
+
+  <!-- ===================================================== the rear, 121 x 52 -->
+  <g transform="translate(10,178)">
+    <rect class="face" x="0" y="0" width="121" height="52" rx="3"/>
+    <text class="size" x="60.5" y="-1.5">REAR - top face edge at the top</text>
+    <circle class="hole" cx="100" cy="24" r="6"/><use href="#x" x="100" y="24"/>
+    <text class="label" x="100" y="14">9V DC</text>
+    <text class="size" x="100" y="36">12 mm</text>
+
+    <circle class="hole" cx="30" cy="24" r="8"/><use href="#x" x="30" y="24"/>
+    <text class="label" x="30" y="12">MIDI IN</text>
+    <text class="size" x="30" y="38">16 mm - check your socket,</text>
+    <text class="size" x="30" y="41">and mark its 2 screw holes</text>
+
+    <circle class="hole" cx="68" cy="24" r="3"/><use href="#x" x="68" y="24"/>
+    <text class="label" x="68" y="16">INST/LINE</text>
+    <text class="size" x="68" y="32">toggle 6 mm</text>
+  </g>
+
+  <!-- ===================================================== the right side's rear end, seen
+       from outside: the top face's edge on the left -->
+  <g transform="translate(145,178)">
+    <rect class="face" x="0" y="0" width="52" height="52" rx="3"/>
+    <text class="size" x="26" y="-1.5">RIGHT SIDE, rear end (from outside)</text>
+    <text class="size" x="2" y="26" transform="rotate(-90 2 26)">top face edge</text>
+    <circle class="hole" cx="30" cy="33" r="4.75"/><use href="#x" x="30" y="33"/>
+    <text class="label" x="30" y="26">INPUT</text>
+    <text class="size" x="30" y="41">9.5 mm</text>
+  </g>
+
+  <!-- ===================================================== the check line -->
+  <g transform="translate(10,248)">
+    <line x1="0" y1="0" x2="100" y2="0" stroke="#000" stroke-width="0.3"/>
+    <line x1="0" y1="-2" x2="0" y2="2" stroke="#000" stroke-width="0.3"/>
+    <line x1="100" y1="-2" x2="100" y2="2" stroke="#000" stroke-width="0.3"/>
+    <text class="note" x="50" y="-2" text-anchor="middle">this line must measure 100 mm - if not, print again at 100% / actual size</text>
+  </g>
+
+  <text class="note" x="10" y="262">Check against your box before drilling: Hammond's dimensions are outside ones, and the</text>
+  <text class="note" x="10" y="266">top face's flat area stops short of its rounded edges. Check the parts' bushings, the</text>
+  <text class="note" x="10" y="270">screen module's window, and the DIN socket (docs/hardware.md).</text>
+</svg>

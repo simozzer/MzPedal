@@ -1,0 +1,280 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 820" width="1632" height="1312" font-family="Helvetica, Arial, sans-serif">
+<rect width="1020" height="820" fill="#fff"/>
+<text x="16" y="24" font-size="15" font-weight="bold">CONTROLS AND MIDI - the control hub, the knobs, the screen, MIDI IN</text>
+<text x="16" y="40" font-size="9.5" fill="#444">The Codec Zero uses GPIO 2, 3 (I2C, shared), 18-21 (audio), 23, 24 and 27. Everything here uses other pins. Part numbers match board-hub.svg.</text>
+<rect x="30" y="60" width="180" height="300" rx="4" fill="#f2f7ee" stroke="#345" stroke-width="1.2"/>
+<text x="120" y="76" font-size="10" text-anchor="middle" font-weight="bold" fill="#000">Raspberry Pi Zero 2 W</text>
+<text x="120" y="88" font-size="8" text-anchor="middle" font-weight="normal" fill="#456">pin number  (BCM)</text>
+<circle cx="210" cy="100" r="2" fill="#345"/>
+<text x="205" y="103" font-size="8" text-anchor="end" font-weight="normal" fill="#000">1  3V3</text>
+<circle cx="210" cy="120" r="2" fill="#345"/>
+<text x="205" y="123" font-size="8" text-anchor="end" font-weight="normal" fill="#000">3  SDA (BCM 2)</text>
+<circle cx="210" cy="140" r="2" fill="#345"/>
+<text x="205" y="143" font-size="8" text-anchor="end" font-weight="normal" fill="#000">5  SCL (BCM 3)</text>
+<circle cx="210" cy="160" r="2" fill="#345"/>
+<text x="205" y="163" font-size="8" text-anchor="end" font-weight="normal" fill="#000">6  GND</text>
+<circle cx="210" cy="180" r="2" fill="#345"/>
+<text x="205" y="183" font-size="8" text-anchor="end" font-weight="normal" fill="#000">2  5V</text>
+<circle cx="210" cy="200" r="2" fill="#345"/>
+<text x="205" y="203" font-size="8" text-anchor="end" font-weight="normal" fill="#000">10  RXD (BCM 15)</text>
+<circle cx="210" cy="220" r="2" fill="#345"/>
+<text x="205" y="223" font-size="8" text-anchor="end" font-weight="normal" fill="#000">11  BCM 17</text>
+<circle cx="210" cy="240" r="2" fill="#345"/>
+<text x="205" y="243" font-size="8" text-anchor="end" font-weight="normal" fill="#000">22  BCM 25</text>
+<circle cx="210" cy="260" r="2" fill="#345"/>
+<text x="205" y="263" font-size="8" text-anchor="end" font-weight="normal" fill="#000">29  BCM 5</text>
+<circle cx="210" cy="280" r="2" fill="#345"/>
+<text x="205" y="283" font-size="8" text-anchor="end" font-weight="normal" fill="#000">31  BCM 6</text>
+<circle cx="210" cy="300" r="2" fill="#345"/>
+<text x="205" y="303" font-size="8" text-anchor="end" font-weight="normal" fill="#000">32  BCM 12</text>
+<circle cx="210" cy="320" r="2" fill="#345"/>
+<text x="205" y="323" font-size="8" text-anchor="end" font-weight="normal" fill="#000">36  BCM 16</text>
+<circle cx="210" cy="340" r="2" fill="#345"/>
+<text x="205" y="343" font-size="8" text-anchor="end" font-weight="normal" fill="#000">37  BCM 26</text>
+<text x="36" y="376" font-size="8" text-anchor="start" font-weight="normal" fill="#333">Each wire from the pin's underside goes</text>
+<text x="36" y="387.5" font-size="8" text-anchor="start" font-weight="normal" fill="#333">to the hub's pad of the same number</text>
+<text x="36" y="399" font-size="8" text-anchor="start" font-weight="normal" fill="#333">(P1, P3 ... P37), and on from there.</text>
+<path d="M210 180L240 180" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="243" y="183" font-size="8.5" text-anchor="start" font-weight="bold" fill="#1a5fb4">5V (U3 pin 8)</text>
+<path d="M210 200L240 200" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="243" y="203" font-size="8.5" text-anchor="start" font-weight="bold" fill="#1a5fb4">MIDI RX</text>
+<path d="M210 220L240 220" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="243" y="223" font-size="8.5" text-anchor="start" font-weight="bold" fill="#1a5fb4">ENC SW</text>
+<path d="M210 240L240 240" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="243" y="243" font-size="8.5" text-anchor="start" font-weight="bold" fill="#1a5fb4">RLY → main J8</text>
+<path d="M210 260L240 260" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="243" y="263" font-size="8.5" text-anchor="start" font-weight="bold" fill="#1a5fb4">ENC A</text>
+<path d="M210 280L240 280" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="243" y="283" font-size="8.5" text-anchor="start" font-weight="bold" fill="#1a5fb4">ENC B</text>
+<path d="M210 300L240 300" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="243" y="303" font-size="8.5" text-anchor="start" font-weight="bold" fill="#1a5fb4">TEMPO</text>
+<path d="M210 320L240 320" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="243" y="323" font-size="8.5" text-anchor="start" font-weight="bold" fill="#1a5fb4">TAP</text>
+<path d="M210 340L240 340" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="243" y="343" font-size="8.5" text-anchor="start" font-weight="bold" fill="#1a5fb4">ON</text>
+<rect x="380" y="70" width="160" height="260" rx="4" fill="#eef3fb" stroke="#345" stroke-width="1.2"/>
+<text x="460" y="86" font-size="10" text-anchor="middle" font-weight="bold" fill="#000">ADS7830 knob board</text>
+<text x="460" y="98" font-size="8" text-anchor="middle" font-weight="normal" fill="#456">Adafruit 5836 - 0x48</text>
+<circle cx="380" cy="100" r="2" fill="#345"/>
+<text x="385" y="103" font-size="8" text-anchor="start" font-weight="normal" fill="#000">VIN</text>
+<circle cx="380" cy="120" r="2" fill="#345"/>
+<text x="385" y="123" font-size="8" text-anchor="start" font-weight="normal" fill="#000">SDA</text>
+<circle cx="380" cy="140" r="2" fill="#345"/>
+<text x="385" y="143" font-size="8" text-anchor="start" font-weight="normal" fill="#000">SCL</text>
+<circle cx="380" cy="160" r="2" fill="#345"/>
+<text x="385" y="163" font-size="8" text-anchor="start" font-weight="normal" fill="#000">GND</text>
+<circle cx="540" cy="170" r="2" fill="#345"/>
+<text x="535" y="173" font-size="8" text-anchor="end" font-weight="normal" fill="#000">A0</text>
+<circle cx="540" cy="190" r="2" fill="#345"/>
+<text x="535" y="193" font-size="8" text-anchor="end" font-weight="normal" fill="#000">A1</text>
+<circle cx="540" cy="210" r="2" fill="#345"/>
+<text x="535" y="213" font-size="8" text-anchor="end" font-weight="normal" fill="#000">A2</text>
+<circle cx="540" cy="230" r="2" fill="#345"/>
+<text x="535" y="233" font-size="8" text-anchor="end" font-weight="normal" fill="#000">A3</text>
+<circle cx="540" cy="250" r="2" fill="#345"/>
+<text x="535" y="253" font-size="8" text-anchor="end" font-weight="normal" fill="#000">A4</text>
+<circle cx="540" cy="270" r="2" fill="#345"/>
+<text x="535" y="273" font-size="8" text-anchor="end" font-weight="normal" fill="#000">A5</text>
+<circle cx="540" cy="290" r="2" fill="#345"/>
+<text x="535" y="293" font-size="8" text-anchor="end" font-weight="normal" fill="#000">A6</text>
+<circle cx="540" cy="310" r="2" fill="#345"/>
+<text x="535" y="313" font-size="8" text-anchor="end" font-weight="normal" fill="#000">A7</text>
+<path d="M210 100L380 100" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M210 120L380 120" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M210 140L380 140" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M210 160L380 160" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="300" y="94" font-size="7.5" text-anchor="middle" font-weight="normal" fill="#555">through the hub's Q pads,</text>
+<text x="300" y="112" font-size="7.5" text-anchor="middle" font-weight="normal" fill="#555">and a STEMMA QT cable</text>
+<text x="392" y="196" font-size="7.5" text-anchor="start" font-weight="normal" fill="#333">STEMMA QT sockets on</text>
+<text x="392" y="207" font-size="7.5" text-anchor="start" font-weight="normal" fill="#333">both sides: plug-in</text>
+<text x="392" y="218" font-size="7.5" text-anchor="start" font-weight="normal" fill="#333">cables, no soldering.</text>
+<text x="392" y="229" font-size="7.5" text-anchor="start" font-weight="normal" fill="#333"></text>
+<text x="392" y="240" font-size="7.5" text-anchor="start" font-weight="normal" fill="#333">The program must</text>
+<text x="392" y="251" font-size="7.5" text-anchor="start" font-weight="normal" fill="#333">leave its internal</text>
+<text x="392" y="262" font-size="7.5" text-anchor="start" font-weight="normal" fill="#333">reference off: REF</text>
+<text x="392" y="273" font-size="7.5" text-anchor="start" font-weight="normal" fill="#333">is VIN, so the knobs</text>
+<text x="392" y="284" font-size="7.5" text-anchor="start" font-weight="normal" fill="#333">use all their travel.</text>
+<path d="M540 170L580 170" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="586" y="173" font-size="8" text-anchor="start" font-weight="normal" fill="#000">DRIVE - pot 1's wiper</text>
+<path d="M540 190L580 190" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="586" y="193" font-size="8" text-anchor="start" font-weight="normal" fill="#000">SHAPE - pot 2's wiper</text>
+<path d="M540 210L580 210" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="586" y="213" font-size="8" text-anchor="start" font-weight="normal" fill="#000">TONE - pot 3's wiper</text>
+<path d="M540 230L580 230" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="586" y="233" font-size="8" text-anchor="start" font-weight="normal" fill="#000">FDBK - pot 4's wiper</text>
+<path d="M540 250L580 250" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="586" y="253" font-size="8" text-anchor="start" font-weight="normal" fill="#000">PUSH - pot 5's wiper</text>
+<path d="M540 270L580 270" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="586" y="273" font-size="8" text-anchor="start" font-weight="normal" fill="#000">DECAY - pot 6's wiper</text>
+<path d="M540 290L580 290" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="586" y="293" font-size="8" text-anchor="start" font-weight="normal" fill="#000">MIX - pot 7's wiper</text>
+<path d="M540 310L580 310" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="586" y="313" font-size="8" text-anchor="start" font-weight="normal" fill="#000">LEVEL - pot 8's wiper</text>
+<rect x="380" y="350" width="160" height="50" rx="4" fill="#eef3fb" stroke="#345" stroke-width="1.2"/>
+<text x="460" y="366" font-size="10" text-anchor="middle" font-weight="bold" fill="#000">0.96" OLED</text>
+<text x="460" y="378" font-size="8" text-anchor="middle" font-weight="normal" fill="#456">Adafruit 326 - SSD1306, 0x3C</text>
+<circle cx="460" cy="350" r="2" fill="#345"/>
+<path d="M460 330L460 350" fill="none" stroke="#666" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="466" y="344" font-size="7.5" text-anchor="start" font-weight="normal" fill="#555">STEMMA QT cable</text>
+<rect x="730" y="60" width="270" height="200" fill="none" stroke="#9aa" stroke-width="1" stroke-dasharray="6 4" rx="6"/>
+<text x="738" y="75" font-size="10" text-anchor="start" font-weight="bold" fill="#567">Each of the 8 knobs</text>
+<path d="M800 110V102M793 102H807" stroke="#000" stroke-width="1.2"/>
+<text x="800" y="99" font-size="8.5" text-anchor="middle" font-weight="bold" fill="#000">VIN (3.3 V)</text>
+<path d="M800 110L800 135" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M800 165L800 190" fill="none" stroke="#000" stroke-width="1.2"/>
+<rect x="795.5" y="135" width="9" height="30" fill="#fff" stroke="#000" stroke-width="1.2"/>
+<text x="810" y="148" font-size="8.5" text-anchor="start" font-weight="bold" fill="#000"></text>
+<path d="M822 150H806l5 -4m-5 4l5 4" stroke="#000" fill="none" stroke-width="1.2"/>
+<text x="791" y="148" font-size="8.5" text-anchor="end" font-weight="bold" fill="#000">B10K</text>
+<text x="791" y="159" font-size="8.5" text-anchor="end" font-weight="normal" fill="#000">linear</text>
+<path d="M822 150L870 150" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="873" y="153" font-size="8.5" text-anchor="start" font-weight="bold" fill="#1a5fb4">to its A pin</text>
+<path d="M800 190V197M792 197H808M795 200.5H805M798 204H802" stroke="#000" stroke-width="1.2" fill="none"/>
+<text x="742" y="226" font-size="8" text-anchor="start" font-weight="normal" fill="#333">Swap the outer two wires if a knob runs</text>
+<text x="742" y="237.5" font-size="8" text-anchor="start" font-weight="normal" fill="#333">backwards. Daisy-chain VIN and GND</text>
+<text x="742" y="249" font-size="8" text-anchor="start" font-weight="normal" fill="#333">from pot to pot.</text>
+<rect x="560" y="340" width="446" height="262" fill="none" stroke="#9aa" stroke-width="1" stroke-dasharray="6 4" rx="6"/>
+<text x="568" y="355" font-size="10" text-anchor="start" font-weight="bold" fill="#567">MIDI IN - opto-isolated, as the MIDI spec has it</text>
+<circle cx="620" cy="450" r="30" fill="#f5f5f5" stroke="#000" stroke-width="1.3"/>
+<circle cx="602" cy="442" r="4" fill="#fff" stroke="#000"/>
+<text x="602" y="445" font-size="6.5" text-anchor="middle" font-weight="normal" fill="#000">4</text>
+<circle cx="638" cy="442" r="4" fill="#fff" stroke="#000"/>
+<text x="638" y="445" font-size="6.5" text-anchor="middle" font-weight="normal" fill="#000">5</text>
+<circle cx="620" cy="462" r="4" fill="#fff" stroke="#000"/>
+<text x="620" y="465" font-size="6.5" text-anchor="middle" font-weight="normal" fill="#000">2</text>
+<text x="620" y="496" font-size="9" text-anchor="middle" font-weight="bold" fill="#000">MIDI IN (5-pin DIN)</text>
+<text x="620" y="508" font-size="7.5" text-anchor="middle" font-weight="normal" fill="#555">pin 2: not connected</text>
+<path d="M602 438L602 390L650 390" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M650 390L660 390" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M690 390L700 390" fill="none" stroke="#000" stroke-width="1.2"/>
+<rect x="660" y="385.5" width="30" height="9" fill="#fff" stroke="#000" stroke-width="1.2"/>
+<text x="675" y="380" font-size="8.5" text-anchor="middle" font-weight="bold" fill="#000">R31</text>
+<text x="675" y="408" font-size="8.5" text-anchor="middle" font-weight="normal" fill="#000">220R</text>
+<path d="M700 390L750 390" fill="none" stroke="#000" stroke-width="1.2"/>
+<circle cx="725" cy="390" r="2.6" fill="#000"/>
+<path d="M638 438L638 425L665 425L665 520L750 520" fill="none" stroke="#000" stroke-width="1.2"/>
+<circle cx="725" cy="520" r="2.6" fill="#000"/>
+<path d="M725 520L725 470" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M725 440L725 390" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M725 440L725 470" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M718 461H732L725 449Z" fill="#000"/><path d="M718 449H732" stroke="#000" stroke-width="1.6"/>
+<text x="715" y="453" font-size="8.5" text-anchor="end" font-weight="bold" fill="#000">D3</text>
+<text x="715" y="464" font-size="8.5" text-anchor="end" font-weight="normal" fill="#000">1N4148</text>
+<rect x="750" y="372" width="110" height="170" rx="4" fill="#fff" stroke="#345" stroke-width="1.2"/>
+<text x="805" y="388" font-size="10" text-anchor="middle" font-weight="bold" fill="#000">6N138</text>
+<text x="805" y="400" font-size="8" text-anchor="middle" font-weight="normal" fill="#456">U3</text>
+<circle cx="750" cy="390" r="2" fill="#345"/>
+<text x="755" y="393" font-size="8" text-anchor="start" font-weight="normal" fill="#000">2 A</text>
+<circle cx="750" cy="520" r="2" fill="#345"/>
+<text x="755" y="523" font-size="8" text-anchor="start" font-weight="normal" fill="#000">3 K</text>
+<circle cx="860" cy="390" r="2" fill="#345"/>
+<text x="855" y="393" font-size="8" text-anchor="end" font-weight="normal" fill="#000">8 Vcc</text>
+<circle cx="860" cy="452" r="2" fill="#345"/>
+<text x="855" y="455" font-size="8" text-anchor="end" font-weight="normal" fill="#000">6 Vo</text>
+<circle cx="860" cy="520" r="2" fill="#345"/>
+<text x="855" y="523" font-size="8" text-anchor="end" font-weight="normal" fill="#000">5 GND</text>
+<circle cx="805" cy="542" r="2" fill="#345"/>
+<text x="809" y="553" font-size="8" text-anchor="start" font-weight="normal" fill="#345">7</text>
+<path d="M860 390L925 390" fill="none" stroke="#000" stroke-width="1.2"/>
+<circle cx="890" cy="390" r="2.6" fill="#000"/>
+<path d="M890 390V382M883 382H897" stroke="#000" stroke-width="1.2"/>
+<text x="890" y="379" font-size="8.5" text-anchor="middle" font-weight="bold" fill="#000">+5V</text>
+<path d="M925 390L925 400" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M925 430L925 440" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M925 400L925 412" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M925 418L925 430" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M916 412H934M916 418H934" stroke="#000" stroke-width="2"/>
+<text x="915" y="413" font-size="8.5" text-anchor="end" font-weight="bold" fill="#000">C31</text>
+<text x="915" y="424" font-size="8.5" text-anchor="end" font-weight="normal" fill="#000">100n 50V</text>
+<path d="M925 440V447M917 447H933M920 450.5H930M923 454H927" stroke="#000" stroke-width="1.2" fill="none"/>
+<path d="M860 452L985 452" fill="none" stroke="#000" stroke-width="1.2"/>
+<circle cx="960" cy="452" r="2.6" fill="#000"/>
+<path d="M985 452L985 438.5" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M985 408.5L985 395" fill="none" stroke="#000" stroke-width="1.2"/>
+<rect x="980.5" y="408.5" width="9" height="30" fill="#fff" stroke="#000" stroke-width="1.2"/>
+<text x="975" y="421.5" font-size="8.5" text-anchor="end" font-weight="bold" fill="#000">R32</text>
+<text x="975" y="432.5" font-size="8.5" text-anchor="end" font-weight="normal" fill="#000">470R</text>
+<path d="M985 395L985 385" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M985 385V377M978 377H992" stroke="#000" stroke-width="1.2"/>
+<text x="985" y="374" font-size="8.5" text-anchor="middle" font-weight="bold" fill="#000">3V3</text>
+<path d="M960 452L960 475" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="957" y="478" font-size="8.5" text-anchor="end" font-weight="bold" fill="#1a5fb4">MIDI RX</text>
+<path d="M860 520L880 520L880 530" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M880 530V537M872 537H888M875 540.5H885M878 544H882" stroke="#000" stroke-width="1.2" fill="none"/>
+<path d="M805 542L805 546" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M805 576L805 580" fill="none" stroke="#000" stroke-width="1.2"/>
+<rect x="800.5" y="546" width="9" height="30" fill="#fff" stroke="#000" stroke-width="1.2"/>
+<text x="815" y="559" font-size="8.5" text-anchor="start" font-weight="bold" fill="#000">R33</text>
+<text x="815" y="570" font-size="8.5" text-anchor="start" font-weight="normal" fill="#000">10k</text>
+<path d="M805 580V587M797 587H813M800 590.5H810M803 594H807" stroke="#000" stroke-width="1.2" fill="none"/>
+<text x="570" y="618" font-size="8" text-anchor="start" font-weight="normal" fill="#333">MIDI RX is the Pi's serial port, at 31250 baud: in config.txt, dtoverlay=midi-uart0 and</text>
+<text x="570" y="629.5" font-size="8" text-anchor="start" font-weight="normal" fill="#333">dtoverlay=disable-bt, and the serial console off in raspi-config. A USB MIDI device can also go in</text>
+<text x="570" y="641" font-size="8" text-anchor="start" font-weight="normal" fill="#333">the Pi's USB port, through an OTG adapter.</text>
+<rect x="14" y="600" width="540" height="210" fill="none" stroke="#9aa" stroke-width="1" stroke-dasharray="6 4" rx="6"/>
+<text x="22" y="615" font-size="10" text-anchor="start" font-weight="bold" fill="#567">The panel: encoder, footswitches, TEMPO LED</text>
+<rect x="40" y="640" width="130" height="110" rx="4" fill="#fbf3e6" stroke="#345" stroke-width="1.2"/>
+<text x="105" y="656" font-size="10" text-anchor="middle" font-weight="bold" fill="#000">Encoder (EC11)</text>
+<text x="105" y="668" font-size="8" text-anchor="middle" font-weight="normal" fill="#456">with push switch</text>
+<circle cx="170" cy="684" r="2" fill="#345"/>
+<text x="165" y="687" font-size="8" text-anchor="end" font-weight="normal" fill="#000">A</text>
+<circle cx="170" cy="702" r="2" fill="#345"/>
+<text x="165" y="705" font-size="8" text-anchor="end" font-weight="normal" fill="#000">B</text>
+<circle cx="170" cy="720" r="2" fill="#345"/>
+<text x="165" y="723" font-size="8" text-anchor="end" font-weight="normal" fill="#000">SW</text>
+<circle cx="170" cy="738" r="2" fill="#345"/>
+<text x="165" y="741" font-size="8" text-anchor="end" font-weight="normal" fill="#000">C</text>
+<circle cx="40" cy="738" r="2" fill="#345"/>
+<text x="45" y="741" font-size="8" text-anchor="start" font-weight="normal" fill="#000">SW'</text>
+<path d="M170 684L220 684" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="223" y="687" font-size="8.5" text-anchor="start" font-weight="bold" fill="#1a5fb4">ENC A</text>
+<path d="M170 702L220 702" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="223" y="705" font-size="8.5" text-anchor="start" font-weight="bold" fill="#1a5fb4">ENC B</text>
+<path d="M170 720L220 720" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="223" y="723" font-size="8.5" text-anchor="start" font-weight="bold" fill="#1a5fb4">ENC SW</text>
+<path d="M170 738L190 738L190 748" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M190 748V755M182 755H198M185 758.5H195M188 762H192" stroke="#000" stroke-width="1.2" fill="none"/>
+<text x="196" y="735" font-size="7" text-anchor="start" font-weight="normal" fill="#555">(the middle pin of A, C, B)</text>
+<path d="M40 738L30 738L30 760" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M30 760V767M22 767H38M25 770.5H35M28 774H32" stroke="#000" stroke-width="1.2" fill="none"/>
+<text x="317" y="653" font-size="8.5" text-anchor="end" font-weight="bold" fill="#1a5fb4">TAP</text>
+<path d="M320 650L335 650" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M365 650L380 650" fill="none" stroke="#000" stroke-width="1.2"/>
+<circle cx="338" cy="650" r="2" fill="#fff" stroke="#000"/><circle cx="362" cy="650" r="2" fill="#fff" stroke="#000"/>
+<path d="M335 650L336 650" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M364 650L365 650" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M340 650L360 640" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="350" y="640" font-size="8.5" text-anchor="middle" font-weight="bold" fill="#000">TAP</text>
+<text x="350" y="668" font-size="8.5" text-anchor="middle" font-weight="normal" fill="#000">footswitch</text>
+<path d="M380 650L395 650L395 660" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M395 660V667M387 667H403M390 670.5H400M393 674H397" stroke="#000" stroke-width="1.2" fill="none"/>
+<text x="317" y="703" font-size="8.5" text-anchor="end" font-weight="bold" fill="#1a5fb4">ON</text>
+<path d="M320 700L335 700" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M365 700L380 700" fill="none" stroke="#000" stroke-width="1.2"/>
+<circle cx="338" cy="700" r="2" fill="#fff" stroke="#000"/><circle cx="362" cy="700" r="2" fill="#fff" stroke="#000"/>
+<path d="M335 700L336 700" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M364 700L365 700" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M340 700L360 690" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="350" y="690" font-size="8.5" text-anchor="middle" font-weight="bold" fill="#000">ON</text>
+<text x="350" y="718" font-size="8.5" text-anchor="middle" font-weight="normal" fill="#000">footswitch</text>
+<path d="M380 700L395 700L395 710" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M395 710V717M387 717H403M390 720.5H400M393 724H397" stroke="#000" stroke-width="1.2" fill="none"/>
+<text x="317" y="763" font-size="8.5" text-anchor="end" font-weight="bold" fill="#1a5fb4">TEMPO</text>
+<path d="M320 760L335 760" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M365 760L380 760" fill="none" stroke="#000" stroke-width="1.2"/>
+<rect x="335" y="755.5" width="30" height="9" fill="#fff" stroke="#000" stroke-width="1.2"/>
+<text x="350" y="750" font-size="8.5" text-anchor="middle" font-weight="bold" fill="#000">R34</text>
+<text x="350" y="778" font-size="8.5" text-anchor="middle" font-weight="normal" fill="#000">470R</text>
+<path d="M380 760L395 760" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M425 760L440 760" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M395 760L425 760" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M404 753V767L416 760Z" fill="#000"/><path d="M416 753V767" stroke="#000" stroke-width="1.6"/>
+<path d="M408 769l6 7m-3 0h3v-3M414 769l6 7m-3 0h3v-3" stroke="#000" stroke-width="0.9" fill="none"/>
+<text x="410" y="750" font-size="8.5" text-anchor="middle" font-weight="bold" fill="#000">TEMPO LED</text>
+<path d="M440 760L460 760L460 770" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M460 770V777M452 777H468M455 780.5H465M458 784H462" stroke="#000" stroke-width="1.2" fill="none"/>
+<text x="440" y="640" font-size="8" text-anchor="start" font-weight="normal" fill="#333">Footswitches: soft-touch</text>
+<text x="440" y="651.5" font-size="8" text-anchor="start" font-weight="normal" fill="#333">momentary, each between</text>
+<text x="440" y="663" font-size="8" text-anchor="start" font-weight="normal" fill="#333">its pin and GND. The Pi's</text>
+<text x="440" y="674.5" font-size="8" text-anchor="start" font-weight="normal" fill="#333">pull-ups hold them high;</text>
+<text x="440" y="686" font-size="8" text-anchor="start" font-weight="normal" fill="#333">the program debounces.</text>
+</svg>

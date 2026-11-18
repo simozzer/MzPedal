@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" width="1600" height="672" font-family="Helvetica, Arial, sans-serif">
+<rect width="1000" height="420" fill="#fff"/>
+<text x="16" y="24" font-size="15" font-weight="bold">DI BOARD (optional) - a balanced XLR out, for a desk or an audio interface</text>
+<text x="16" y="40" font-size="9.5" fill="#444">Fed from the OUTPUT jack's line, after the relay: it carries what the amp gets, effect or bypass. Part numbers match board-di.svg.</text>
+<text x="77" y="143" font-size="8.5" text-anchor="end" font-weight="bold" fill="#1a5fb4">OUTJ (main J10a)</text>
+<path d="M80 140L100 140" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M100 140L115 140" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M145 140L160 140" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M115 140L127 140" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M133 140L145 140" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M127 131V149M133 131V149" stroke="#000" stroke-width="2"/>
+<text x="130" y="130" font-size="8.5" text-anchor="middle" font-weight="bold" fill="#000">C9</text>
+<text x="130" y="158" font-size="8.5" text-anchor="middle" font-weight="normal" fill="#000">100n film 63V</text>
+<path d="M160 140L200 140" fill="none" stroke="#000" stroke-width="1.2"/>
+<circle cx="180" cy="140" r="2.6" fill="#000"/>
+<path d="M180 140L180 157.5" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M180 187.5L180 205" fill="none" stroke="#000" stroke-width="1.2"/>
+<rect x="175.5" y="157.5" width="9" height="30" fill="#fff" stroke="#000" stroke-width="1.2"/>
+<text x="170" y="170.5" font-size="8.5" text-anchor="end" font-weight="bold" fill="#000">R12</text>
+<text x="170" y="181.5" font-size="8.5" text-anchor="end" font-weight="normal" fill="#000">1M</text>
+<path d="M180 205L180 215" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="183" y="221" font-size="8.5" text-anchor="start" font-weight="bold" fill="#1a5fb4">VREF2</text>
+<path d="M200 99V155L250 127Z" fill="#fff" stroke="#000" stroke-width="1.3"/>
+<text x="205" y="118" font-size="12" text-anchor="start" font-weight="normal" fill="#000">−</text>
+<text x="205" y="145" font-size="11" text-anchor="start" font-weight="normal" fill="#000">+</text>
+<text x="202" y="169" font-size="8.5" text-anchor="start" font-weight="bold" fill="#000">U2</text>
+<text x="202" y="180" font-size="8" text-anchor="start" font-weight="normal" fill="#000">TL071  (7: +9V, 4: GND)</text>
+<path d="M200 140L200 140" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M250 127L270 127" fill="none" stroke="#000" stroke-width="1.2"/>
+<circle cx="270" cy="127" r="2.6" fill="#000"/>
+<path d="M270 127L270 95L190 95L190 114L200 114" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M270 127L285 127" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M315 127L330 127" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M285 127L297 127" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M303 127L315 127" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M297 118V136M303 118V136" stroke="#000" stroke-width="2"/>
+<text x="291" y="116" font-size="10" text-anchor="middle" font-weight="bold" fill="#c00">+</text>
+<text x="300" y="117" font-size="8.5" text-anchor="middle" font-weight="bold" fill="#000">C10</text>
+<text x="300" y="145" font-size="8.5" text-anchor="middle" font-weight="normal" fill="#000">22u 25V</text>
+<path d="M330 127L360 127" fill="none" stroke="#000" stroke-width="1.2"/>
+<circle cx="345" cy="127" r="2.6" fill="#000"/>
+<path d="M360 127L380 127" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M410 127L430 127" fill="none" stroke="#000" stroke-width="1.2"/>
+<rect x="380" y="122.5" width="30" height="9" fill="#fff" stroke="#000" stroke-width="1.2"/>
+<text x="395" y="117" font-size="8.5" text-anchor="middle" font-weight="bold" fill="#000">R14</text>
+<text x="395" y="145" font-size="8.5" text-anchor="middle" font-weight="normal" fill="#000">10k</text>
+<path d="M345 127L345 80L370 80" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M370 80L380 80" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M410 80L420 80" fill="none" stroke="#000" stroke-width="1.2"/>
+<circle cx="383" cy="80" r="2" fill="#fff" stroke="#000"/><circle cx="407" cy="80" r="2" fill="#fff" stroke="#000"/>
+<path d="M380 80L381 80" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M409 80L410 80" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M385 80L405 70" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="395" y="70" font-size="8.5" text-anchor="middle" font-weight="bold" fill="#000">S2 PAD</text>
+<path d="M420 80L445 80L445 127" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M430 127L480 127" fill="none" stroke="#000" stroke-width="1.2"/>
+<circle cx="445" cy="127" r="2.6" fill="#000"/>
+<circle cx="460" cy="127" r="2.6" fill="#000"/>
+<path d="M460 127L460 143.5" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M460 173.5L460 190" fill="none" stroke="#000" stroke-width="1.2"/>
+<rect x="455.5" y="143.5" width="9" height="30" fill="#fff" stroke="#000" stroke-width="1.2"/>
+<text x="470" y="156.5" font-size="8.5" text-anchor="start" font-weight="bold" fill="#000">R15</text>
+<text x="470" y="167.5" font-size="8.5" text-anchor="start" font-weight="normal" fill="#000">1k1</text>
+<path d="M460 190V197M452 197H468M455 200.5H465M458 204H462" stroke="#000" stroke-width="1.2" fill="none"/>
+<path d="M480 127L495 127" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M525 127L540 127" fill="none" stroke="#000" stroke-width="1.2"/>
+<rect x="495" y="122.5" width="30" height="9" fill="#fff" stroke="#000" stroke-width="1.2"/>
+<text x="510" y="117" font-size="8.5" text-anchor="middle" font-weight="bold" fill="#000">R16</text>
+<text x="510" y="145" font-size="8.5" text-anchor="middle" font-weight="normal" fill="#000">100R</text>
+<path d="M570 127L570 127" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M540 127L540 127" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M540 127L552 127" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M558 127L570 127" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M552 118V136M558 118V136" stroke="#000" stroke-width="2"/>
+<text x="564" y="116" font-size="10" text-anchor="middle" font-weight="bold" fill="#c00">+</text>
+<text x="555" y="117" font-size="8.5" text-anchor="middle" font-weight="bold" fill="#000">C11</text>
+<text x="555" y="145" font-size="8.5" text-anchor="middle" font-weight="normal" fill="#000">10u 100V</text>
+<path d="M570 127L663 127L663 136" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="615" y="121" font-size="8" text-anchor="middle" font-weight="normal" fill="#555">hot</text>
+<circle cx="690" cy="155" r="38" fill="#f5f5f5" stroke="#000" stroke-width="1.3"/>
+<text x="690" y="108" font-size="9" text-anchor="middle" font-weight="bold" fill="#000">XLR (male, panel)</text>
+<circle cx="668" cy="140" r="5" fill="#fff" stroke="#000"/>
+<text x="668" y="143" font-size="7" text-anchor="middle" font-weight="normal" fill="#000">2</text>
+<circle cx="712" cy="140" r="5" fill="#fff" stroke="#000"/>
+<text x="712" y="143" font-size="7" text-anchor="middle" font-weight="normal" fill="#000">3</text>
+<circle cx="690" cy="178" r="5" fill="#fff" stroke="#000"/>
+<text x="690" y="181" font-size="7" text-anchor="middle" font-weight="normal" fill="#000">1</text>
+<path d="M717 140L745 140L745 230L570 230" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="615" y="224" font-size="8" text-anchor="middle" font-weight="normal" fill="#555">cold</text>
+<path d="M570 230L570 230" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M540 230L540 230" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M540 230L552 230" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M558 230L570 230" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M552 221V239M558 221V239" stroke="#000" stroke-width="2"/>
+<text x="564" y="219" font-size="10" text-anchor="middle" font-weight="bold" fill="#c00">+</text>
+<text x="555" y="220" font-size="8.5" text-anchor="middle" font-weight="bold" fill="#000">C12</text>
+<text x="555" y="248" font-size="8.5" text-anchor="middle" font-weight="normal" fill="#000">10u 100V</text>
+<path d="M540 230L525 230" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M495 230L480 230" fill="none" stroke="#000" stroke-width="1.2"/>
+<rect x="495" y="225.5" width="30" height="9" fill="#fff" stroke="#000" stroke-width="1.2"/>
+<text x="510" y="220" font-size="8.5" text-anchor="middle" font-weight="bold" fill="#000">R17</text>
+<text x="510" y="248" font-size="8.5" text-anchor="middle" font-weight="normal" fill="#000">100R</text>
+<path d="M480 230L470 230L470 242" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M470 242V249M462 249H478M465 252.5H475M468 256H472" stroke="#000" stroke-width="1.2" fill="none"/>
+<path d="M690 183L690 290L650 290" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M650 290L640 290" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M610 290L600 290" fill="none" stroke="#000" stroke-width="1.2"/>
+<circle cx="613" cy="290" r="2" fill="#fff" stroke="#000"/><circle cx="637" cy="290" r="2" fill="#fff" stroke="#000"/>
+<path d="M610 290L611 290" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M639 290L640 290" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M615 290L635 280" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="625" y="280" font-size="8.5" text-anchor="middle" font-weight="bold" fill="#000">S3</text>
+<text x="625" y="308" font-size="8.5" text-anchor="middle" font-weight="normal" fill="#000">LIFT</text>
+<path d="M600 290L580 290L580 302" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M580 302V309M572 309H588M575 312.5H585M578 316H582" stroke="#000" stroke-width="1.2" fill="none"/>
+<text x="452" y="72" font-size="7.5" text-anchor="start" font-weight="normal" fill="#333">closed: 0 dB</text>
+<text x="452" y="83" font-size="7.5" text-anchor="start" font-weight="normal" fill="#333">open: −20 dB</text>
+<path d="M80 290V282M73 282H87" stroke="#000" stroke-width="1.2"/>
+<text x="80" y="279" font-size="8.5" text-anchor="middle" font-weight="bold" fill="#000">+9V</text>
+<path d="M80 290L80 300" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M80 330L80 340" fill="none" stroke="#000" stroke-width="1.2"/>
+<rect x="75.5" y="300" width="9" height="30" fill="#fff" stroke="#000" stroke-width="1.2"/>
+<text x="90" y="313" font-size="8.5" text-anchor="start" font-weight="bold" fill="#000">R21</text>
+<text x="90" y="324" font-size="8.5" text-anchor="start" font-weight="normal" fill="#000">10k</text>
+<path d="M80 340L175 340" fill="none" stroke="#000" stroke-width="1.2"/>
+<circle cx="80" cy="340" r="2.6" fill="#000"/>
+<circle cx="145" cy="340" r="2.6" fill="#000"/>
+<path d="M80 340L80 350" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M80 380L80 390" fill="none" stroke="#000" stroke-width="1.2"/>
+<rect x="75.5" y="350" width="9" height="30" fill="#fff" stroke="#000" stroke-width="1.2"/>
+<text x="90" y="363" font-size="8.5" text-anchor="start" font-weight="bold" fill="#000">R22</text>
+<text x="90" y="374" font-size="8.5" text-anchor="start" font-weight="normal" fill="#000">10k</text>
+<path d="M80 390V397M72 397H88M75 400.5H85M78 404H82" stroke="#000" stroke-width="1.2" fill="none"/>
+<path d="M145 340L145 350" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M145 380L145 390" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M145 350L145 362" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M145 368L145 380" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M136 362H154M136 368H154" stroke="#000" stroke-width="2"/>
+<text x="130" y="362" font-size="10" text-anchor="start" font-weight="bold" fill="#c00">+</text>
+<text x="155" y="363" font-size="8.5" text-anchor="start" font-weight="bold" fill="#000">C21</text>
+<text x="155" y="374" font-size="8.5" text-anchor="start" font-weight="normal" fill="#000">47u 25V</text>
+<path d="M145 390V397M137 397H153M140 400.5H150M143 404H147" stroke="#000" stroke-width="1.2" fill="none"/>
+<text x="178" y="343" font-size="8.5" text-anchor="start" font-weight="bold" fill="#1a5fb4">VREF2</text>
+<path d="M240 290V282M233 282H247" stroke="#000" stroke-width="1.2"/>
+<text x="240" y="279" font-size="8.5" text-anchor="middle" font-weight="bold" fill="#000">+9V</text>
+<path d="M240 290L240 305" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M240 335L240 350" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M240 305L240 317" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M240 323L240 335" fill="none" stroke="#000" stroke-width="1.2"/>
+<path d="M231 317H249M231 323H249" stroke="#000" stroke-width="2"/>
+<text x="250" y="318" font-size="8.5" text-anchor="start" font-weight="bold" fill="#000">C22</text>
+<text x="250" y="329" font-size="8.5" text-anchor="start" font-weight="normal" fill="#000">100n 50V</text>
+<path d="M240 350V357M232 357H248M235 360.5H245M238 364H242" stroke="#000" stroke-width="1.2" fill="none"/>
+<text x="252" y="380" font-size="8" text-anchor="start" font-weight="normal" fill="#555">at U2</text>
+<text x="330" y="330" font-size="8.5" text-anchor="start" font-weight="normal" fill="#333">Impedance-balanced: hot is driven through R16 and C11, cold held to ground through R17 and C12 - the</text>
+<text x="330" y="342" font-size="8.5" text-anchor="start" font-weight="normal" fill="#333">same impedance - so the desk rejects hum picked up along the cable.</text>
+<text x="330" y="354" font-size="8.5" text-anchor="start" font-weight="normal" fill="#333">C11 and C12 block a desk's +48 V phantom power: rated 100 V, their + towards the XLR.</text>
+<text x="330" y="366" font-size="8.5" text-anchor="start" font-weight="normal" fill="#333">Use an XLR whose pin 1 is apart from its metal housing (Neutrik D-series), or the box undoes LIFT.</text>
+<text x="330" y="378" font-size="8.5" text-anchor="start" font-weight="normal" fill="#333">For the most hum rejection, a 10:1 DI transformer can take the place of R16, R17, C11 and C12.</text>
+</svg>

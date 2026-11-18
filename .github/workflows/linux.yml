@@ -1,0 +1,99 @@
+#
+# MzPedal for Linux: built and checked on every push to main, for arm64 - the Raspberry
+# Pi Zero 2 W, 3, 4 and 5 on 64-bit Raspberry Pi OS - and x86_64, and the arm64 build packed
+# as the pedal's download.
+#
+# Built on Ubuntu 22.04, whose glibc is older than Raspberry Pi OS Bookworm's, so what is built
+# here runs there. The benchmark runs too, for the record: a GitHub ARM runner is far quicker
+# than a Zero 2 W, so it is the Pi's own PedalCheck --bench that says whether the Pi keeps up.
+#
+# Run by hand with a release's tag, it attaches the arm64 archive to that release.
+#
+name: linux
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      release:
+        description: "An existing release's tag to attach the archive to (optional)"
+        type: string
+        required: false
+
+permissions:
+  contents: write
+
+env:
+  NAME: MzPedal
+  SIBLINGS: "MzPCD MzPCF"   # the repositories CMakeLists.txt expects beside this one
+  JUCE_TAG: "9.0.2"
+  TAG: ${{ inputs.release }}
+
+jobs:
+  linux:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { runner: ubuntu-22.04-arm, arch: arm64 }
+          - { runner: ubuntu-22.04,     arch: x86_64 }
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.release || github.sha }}
+
+      # no window, so none of JUCE's GUI libraries: ALSA is all it needs
+      - name: The libraries JUCE builds against
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends g++ cmake ninja-build pkg-config libasound2-dev
+
+      - name: JUCE, MzPCD and MzPCF, beside the repository
+        run: |
+          git clone --depth 1 --branch "$JUCE_TAG" https://github.com/juce-framework/JUCE ../JUCE
+          for s in $SIBLINGS; do git clone --depth 1 "https://github.com/simozzer/$s" "../$s"; done
+
+      - name: Build
+        run: |
+          set -o pipefail
+          cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
+          cmake --build build --parallel 2>&1 | tee build.log || {
+            grep -E "error:" build.log | head -40 | while IFS= read -r l; do echo "::error::$l"; done
+            exit 1
+          }
+
+      - name: The checks, and the benchmark
+        run: ./build/PedalCheck --bench
+
+      - name: Package
+        if: matrix.arch == 'arm64'
+        run: |
+          ver=$(sed -n "s/^project(MzPedal VERSION \([0-9.]*\).*/\1/p" CMakeLists.txt)
+          pkg="$NAME-$ver-linux-arm64"
+          out="dist/$pkg"
+          mkdir -p "$out"
+          cp build/MzPedal_artefacts/Release/mzpedal build/PedalCheck "$out/"
+          strip "$out/mzpedal" "$out/PedalCheck"
+          cp linux/install.sh linux/mzpedal.service linux/mzpedal.default LICENSE README.md "$out/"
+          chmod +x "$out/install.sh"
+          (cd dist && tar -czf "$pkg.tar.gz" "$pkg" && sha256sum "$pkg.tar.gz" | tee SHA256SUMS.txt)
+          echo "PKG=$pkg" >> "$GITHUB_ENV"
+
+      - name: Keep the build
+        if: matrix.arch == 'arm64'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.PKG }}
+          path: |
+            dist/*.tar.gz
+            dist/SHA256SUMS.txt
+          retention-days: 14
+          if-no-files-found: error
+
+      - name: Attach to the release
+        if: matrix.arch == 'arm64' && env.TAG != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload "$TAG" "dist/$PKG.tar.gz" dist/SHA256SUMS.txt --clobber

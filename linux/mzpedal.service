@@ -1,0 +1,34 @@
+# MzPedal, started at boot and started again if it ever stops. install.sh fills in @USER@.
+#
+#   sudo systemctl status mzpedal       is it running
+#   journalctl -u mzpedal -f            what it says
+#   echo status > /run/mzpedal/control  a command, while it runs
+
+[Unit]
+Description=MzPedal, the pattern-controlled distortion as a guitar pedal
+After=sound.target
+Wants=sound.target
+
+[Service]
+Type=simple
+User=@USER@
+Group=audio
+EnvironmentFile=-/etc/default/mzpedal
+
+# the CPU at full speed, so the audio never waits for it to wake up
+ExecStartPre=+/bin/sh -c 'for g in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do echo performance > "$g"; done || true'
+ExecStart=/usr/local/bin/mzpedal --midi all --control /run/mzpedal/control $MZPEDAL_ARGS
+
+RuntimeDirectory=mzpedal
+RuntimeDirectoryMode=0770
+StandardInput=null
+Restart=always
+RestartSec=1
+
+# real-time priority for the audio thread, and the program held in memory
+LimitRTPRIO=95
+LimitMEMLOCK=infinity
+Nice=-10
+
+[Install]
+WantedBy=multi-user.target
