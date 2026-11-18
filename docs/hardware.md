@@ -8,6 +8,9 @@ in, and outputs for an amp, a desk or an audio interface.
   machine or keyboard, with an **INST/LINE** switch. **MIDI IN** on a 5-pin DIN, for a clock.
 - **Outputs:** **OUTPUT**, to an amp or a line input; and an optional balanced **DI OUT**
   (XLR), with **PAD** and ground **LIFT**, to a desk or an audio interface.
+- **Service:** **USB** and **HDMI** sockets on the right side, for a keyboard, a mouse, a screen
+  and a wired network (through a USB hub with an Ethernet port) - to set it up and upgrade it.
+  Nothing needs them to play.
 
 No fine soldering: every small chip comes on a ready-made board, or plugs into a socket. The
 soldering is wires to big lugs, and parts with legs into stripboard at 2.54 mm.
@@ -36,6 +39,9 @@ against their circuits as they are drawn (see the end).
 2. **The screen's window.** The template's 24 x 13 mm is for a 0.96" OLED's visible area; check
    it against your module before cutting.
 3. **The DIN socket.** Panel MIDI sockets vary: drill to fit the one you have.
+4. **The USB and HDMI panel leads.** Their cutouts and screw spacing vary: mark them from the
+   leads you have. They sit below the pots and the encoder, so offer them up inside the box,
+   with the top face's parts fitted, before drilling.
 
 ## The box
 
@@ -49,6 +55,8 @@ against their circuits as they are drawn (see the end).
 | Top | 2 LEDs, 5 mm, in bezels | 8 mm |
 | Top | 2 soft-touch momentary footswitches | 12 mm |
 | Right side | INPUT, 1/4" mono jack | 9.5 mm |
+| Right side | USB-A socket, on a panel-mount lead | about 14 x 7 mm, and its 2 screw holes - to fit |
+| Right side | HDMI socket, on a panel-mount lead | about 17 x 8 mm, and its 2 screw holes - to fit |
 | Left side | OUTPUT, 1/4" mono jack | 9.5 mm |
 | Left side | *optional* DI OUT, XLR (Neutrik D-series) | 24 mm, and its 2 screw holes |
 | Left side | *optional* PAD and LIFT, mini toggles | 6 mm each |
@@ -61,7 +69,7 @@ measure 100 mm. Centre punch through it, drill a 3 mm pilot, then step up.
 
 ## Parts
 
-Approximate UK prices, for planning - check before ordering. About **£125-£165** for the
+Approximate UK prices, for planning - check before ordering. About **£130-£180** for the
 pedal with the DI, before a power supply and postage.
 
 | | Part | Notes | About |
@@ -81,6 +89,8 @@ pedal with the DI, before a power supply and postage.
 | 1 | 6N138 opto-isolator, and an 8-pin socket | MIDI IN | £1 |
 | 1 | 9 V to 5 V buck converter, 2 A or more - e.g. Pololu D24V22F5 | | £10-£13 |
 | 1 | short micro-USB lead, or a micro-USB plug with screw terminals | the buck to the Pi | £2-£4 |
+| 1 | panel-mount **OTG** lead: USB-A socket to a micro-USB plug (right-angled), 20-30 cm, screw ears | the Pi's USB port, to the right side | £3-£6 |
+| 1 | panel-mount lead: HDMI socket to a mini-HDMI plug, 20-30 cm, screw ears | the Pi's HDMI, to the right side | £4-£7 |
 | 2 | 1/4" mono jacks | | £3-£6 |
 | 1 | 2.1 mm DC jack, **plastic bodied** | | £1-£2 |
 | 1 | 5-pin DIN panel socket (female) | MIDI IN | £1-£3 |
@@ -88,10 +98,12 @@ pedal with the DI, before a power supply and postage.
 | 2 | 5 mm LEDs and bezels | ON, TEMPO | £1-£2 |
 | | resistors, capacitors, diodes, a 2N3904, stripboard, wire, pin headers, standoffs | as listed on each board | £8-£12 |
 | | *optional DI:* Neutrik NC3MD-L-1 XLR (or similar, with a separate pin 1) | | £3-£5 |
+| | *for the bench, not in the box:* a USB 2.0 hub with an Ethernet port | keyboard, mouse, wired network | £10-£15 |
 
 The resistors and capacitors for each board are listed beside its layout. A 9 V supply rated
 **1 A** or more: the Pi and Codec Zero take up to about 0.6-0.7 A at 9 V, more than many
-pedalboard outlets give.
+pedalboard outlets give. **1.5 A** or more if a keyboard, a mouse and a network adapter are
+plugged into the USB socket: they take about 0.25 A more at 9 V.
 
 ## The Pi's pins
 
@@ -131,7 +143,7 @@ Codec Zero; the Pi plays MzPCD; the Codec Zero's output comes back through the r
 
 **MIDI IN.** A 6N138 opto-isolator, as the MIDI spec has it, so the pedal and the MIDI source
 never share a ground. The Pi reads it on its serial port at 31250 baud. A USB MIDI device can
-also go into the Pi's USB port, through an OTG adapter.
+also go into the USB socket.
 
 **The relay** is driven by BCM 25 through Q1. BCM 25 rests low while the Pi boots, and R20 holds
 it low besides. The ON LED is lit by the relay's own current, so it shows what the relay is
@@ -140,6 +152,12 @@ really doing.
 **Power.** 9 V in, through a Schottky diode against a reversed supply, to the buffers; a buck
 converter makes 5 V for the Pi (through its micro-USB power port, so it keeps its own fuse) and
 the relay. The Codec Zero takes its power from the Pi.
+
+**USB and HDMI.** Panel leads bring the Pi's USB port (the one marked USB, not PWR IN) and its
+mini-HDMI out to the right side. The Pi runs that port as a host, with nothing to set, so a hub
+on it takes a keyboard, a mouse, a USB Ethernet adapter or a USB MIDI device, powered from the
+pedal's 5 V; the HDMI gives a monitor the Pi's console. The Pi's Wi-Fi does for upgrades too,
+with nothing plugged in. Unplug the hub to play: what is on it takes power and can add noise.
 
 ## Putting it together
 

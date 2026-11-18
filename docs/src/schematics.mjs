@@ -248,7 +248,7 @@ export function schematicControls() {
     s.gnd(805, 580);
     s.note(570, 618, ['MIDI RX is the Pi\'s serial port, at 31250 baud: in config.txt, dtoverlay=midi-uart0 and',
         'dtoverlay=disable-bt, and the serial console off in raspi-config. A USB MIDI device can also go in',
-        'the Pi\'s USB port, through an OTG adapter.'], 8);
+        'the USB socket on the right side.'], 8);
 
     // the panel
     s.frame(14, 600, 540, 210, 'The panel: encoder, footswitches, TEMPO LED');
@@ -298,10 +298,15 @@ export function wiringOverview() {
     s.text(320, 476, 'its 5V out → the Pi\'s PWR port, by a short micro-USB lead', { size: 8, anchor: 'middle', fill: '#1a5fb4' });
 
     const stack = s.box(500, 90, 230, 150, 'Pi Zero 2 W + Codec Zero', 'the Codec Zero plugged on top', [
-        ['left', 'AUX IN', 60], ['left', 'AUX OUT', 100], ['top', '~pwr', 60], ['bottom', 'header pins, underneath', 115],
+        ['left', 'AUX IN', 60], ['left', 'AUX OUT', 100], ['top', '~pwr', 60], ['top', '~usb', 185], ['top', '~hdmi', 215],
+        ['bottom', 'header pins, underneath', 115],
     ], pi);
     s.wire(main.J5, stack['AUX IN']).wire(main.J6, stack['AUX OUT']);
     s.wire(stack['~pwr'], [560, 74]).net(560, 74, 'PWR (micro-USB) ← 5V');
+    // the service ports, on panel leads to the right side
+    s.wire(stack['~usb'], [685, 66]).text(685, 61, 'USB', { size: 8.5, weight: 'bold', fill: '#1a5fb4', anchor: 'middle' });
+    s.wire(stack['~hdmi'], [715, 66]).text(715, 61, 'HDMI', { size: 8.5, weight: 'bold', fill: '#1a5fb4', anchor: 'middle' });
+    s.text(740, 62, '→ panel leads, right side', { size: 8, fill: '#555' });
 
     const hub = s.box(500, 300, 230, 230, 'CONTROL HUB', 'board-hub.svg', [
         ['top', '~pi', 115], ['left', 'RLY', 30], ['right', 'I2C', 30], ['right', 'encoder', 70], ['right', 'TAP', 115],

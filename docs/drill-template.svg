@@ -105,15 +105,29 @@
     <text class="size" x="68" y="32">toggle 6 mm</text>
   </g>
 
-  <!-- ===================================================== the right side's rear end, seen
-       from outside: the top face's edge on the left -->
+  <!-- ===================================================== the right side's rear 100 mm, seen
+       from outside: the top face's edge on the left, the rear at the top -->
   <g transform="translate(145,178)">
-    <rect class="face" x="0" y="0" width="52" height="52" rx="3"/>
-    <text class="size" x="26" y="-1.5">RIGHT SIDE, rear end (from outside)</text>
-    <text class="size" x="2" y="26" transform="rotate(-90 2 26)">top face edge</text>
+    <path class="face" d="M0 100 V3 A3 3 0 0 1 3 0 H49 A3 3 0 0 1 52 3 V100"/>
+    <line class="cut" x1="0" y1="100" x2="52" y2="100"/>
+    <text class="size" x="26" y="-1.5">RIGHT SIDE, rear 100 mm (from outside)</text>
+    <text class="size" x="26" y="104">box continues to the front</text>
+    <text class="size" x="2" y="50" transform="rotate(-90 2 50)">top face edge</text>
     <circle class="hole" cx="30" cy="33" r="4.75"/><use href="#x" x="30" y="33"/>
     <text class="label" x="30" y="26">INPUT</text>
     <text class="size" x="30" y="41">9.5 mm</text>
+
+    <!-- the panel-mount leads: cut-outs and screw holes, ears across the side -->
+    <rect class="cut" x="23" y="54.5" width="14" height="7"/><use href="#x" x="30" y="58"/>
+    <circle class="hole" cx="15" cy="58" r="1.6"/><circle class="hole" cx="45" cy="58" r="1.6"/>
+    <text class="label" x="30" y="52">USB</text>
+    <text class="size" x="30" y="65">about 14 x 7, M3 screws</text>
+
+    <rect class="cut" x="21.5" y="78" width="17" height="8"/><use href="#x" x="30" y="82"/>
+    <circle class="hole" cx="15" cy="82" r="1.6"/><circle class="hole" cx="45" cy="82" r="1.6"/>
+    <text class="label" x="30" y="75.5">HDMI</text>
+    <text class="size" x="30" y="89.5">about 17 x 8, M3 screws</text>
+    <text class="size" x="30" y="93">mark both from your leads</text>
   </g>
 
   <!-- ===================================================== the check line -->
@@ -126,5 +140,5 @@
 
   <text class="note" x="10" y="262">Check against your box before drilling: Hammond's dimensions are outside ones, and the</text>
   <text class="note" x="10" y="266">top face's flat area stops short of its rounded edges. Check the parts' bushings, the</text>
-  <text class="note" x="10" y="270">screen module's window, and the DIN socket (docs/hardware.md).</text>
+  <text class="note" x="10" y="270">screen module's window, the DIN socket, and the USB and HDMI leads (docs/hardware.md).</text>
 </svg>
